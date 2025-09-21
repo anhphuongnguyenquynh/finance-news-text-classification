@@ -6,8 +6,8 @@ from pydantic import BaseModel
 import pickle
 
 from model_train import BiLSTM
-from dataprep_func import preprocess_text, pad_input, map_tokens
-from eval_predict_func import predict
+from func_dataprep import preprocess_text, pad_input, map_tokens
+from func_eval_predict import predict
 
 
 # Load utils BiLSTM

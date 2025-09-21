@@ -18,10 +18,12 @@ model.eval()  # set model ở chế độ inference
 
 
 class ArticleText(BaseModel):
+    header: str
     text: str
+    summary: str
 
 
-@app.post("/predict")
+@app.post("/article_sentiment")
 def analysis(article: ArticleText):
     # Tokenize input
     inputs = tokenizer(article.text, return_tensors="pt", truncation=True, padding=True)
@@ -40,11 +42,10 @@ def analysis(article: ArticleText):
         "probabilities": probs.tolist()
     }
 
-
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
 
-# curl -X POST "http://127.0.0.1:8000/predict" \
+# curl -X POST "http://127.0.0.1:8000/article_sentiment" \
 #      -H "Content-Type: application/json" \
 #      -d '{"text": "PBS to Cut 15% of Its Staff"}'
