@@ -1,4 +1,4 @@
-# 📊 Financial AI Tool
+# 📊 Text classification for finance domain
 
 An AI-powered toolkit for the **financial domain**, providing extensible features for data-driven decision support.  
 
@@ -8,6 +8,16 @@ An AI-powered toolkit for the **financial domain**, providing extensible feature
   - Classify financial news & reports into **Positive / Neutral / Negative** sentiments using **BERT** fine-tuned on domain-specific data.  
   - Useful for traders, analysts, and portfolio managers to detect market mood.  
 
+** News category classfication on Articles headers and summary**
+- Classifiy financial news into categories (Business & Finance, Politics, Travel,...)
+- Dataset: [Huffpost](https://www.kaggle.com/datasets/rmisra/news-category-dataset/data) 210k news headlines from 2012 and 2022 from HuffPost. Each record in dataset consists of attributes: category, headline, authors, link, short_description, date.
+- Experiments and results:
+| Method | Accuracy | Precision | Recall |
+| GRU | --- | --- | --- |
+| LSTM | --- | --- | --- |
+| BiLSTM | 0.6385 | 0.6232 | 0.6385 |
+
+Furthermore, I also using FastAPI to get response prediction of news headlines. 
 ---
 
 ## 🛠️ Tech Stack
@@ -18,3 +28,5 @@ An AI-powered toolkit for the **financial domain**, providing extensible feature
 - **Data**: Financial articles & news datasets (custom + open sources)  
 
 
+Note:
+docker, registry -> đóng gói thành image
