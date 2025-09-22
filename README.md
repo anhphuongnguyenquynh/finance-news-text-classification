@@ -1,4 +1,4 @@
-# 📊 Text classification for finance domain
+# 📊 Finance News Text Classification
 
 ---
 ## 🚀 Features
