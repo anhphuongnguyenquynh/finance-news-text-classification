@@ -15,6 +15,7 @@
 | GRU | --- | --- | --- |
 | LSTM | --- | --- | --- |
 | BiLSTM | 0.6385 | 0.6232 | 0.6385 |
+| Transformers | 0.6180 | 0.6085 | 0.6406 |
 
 I also using FastAPI to get response prediction of news headlines. 
 
